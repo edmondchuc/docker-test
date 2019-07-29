@@ -1,8 +1,9 @@
 FROM python:3-alpine
 
-ADD ./flaskapp /flaskapp
+RUN apk add git
+RUN git clone https://github.com/edmondchuc/dockter-test.git
 
-WORKDIR /flaskapp
+WORKDIR /dockter-test
 
 RUN pip3 install -r requirements.txt
 
