@@ -5,7 +5,7 @@ RUN git clone https://github.com/edmondchuc/dockter-test.git
 
 WORKDIR /dockter-test
 
-RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade pip --no-cache-dir
 RUN pip3 install -r requirements.txt --no-cache-dir
 
 EXPOSE 8000
