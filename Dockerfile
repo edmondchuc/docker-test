@@ -8,8 +8,8 @@ WORKDIR /dockter-test
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt --no-cache-dir
 
-EXPOSE 5000
+EXPOSE 8000
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["gunicorn"]
 
-CMD ["app.py"]
+CMD ["app:app"]
