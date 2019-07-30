@@ -12,4 +12,4 @@ EXPOSE 8000
 
 ENTRYPOINT ["gunicorn"]
 
-CMD ["app:app"]
+CMD ["-b 0.0.0.0:8000 app:app"]
